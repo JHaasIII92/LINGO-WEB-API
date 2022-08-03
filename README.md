@@ -10,6 +10,8 @@ https://tsp.lingo-api-demo.com/
 
 https://staff-schedule.lingo-api-demo.com/
 
+To learn how you can use the LINGO REST API with your application, contact info@lindo.com.
+
 ## Setting Up A Demo Server
 
 A LINGO REST API server can be run locally on your computer with Docker. To get started download [Docker and Docker Compose](https://docs.docker.com/compose/install/).  Next download the LINGO-WEB-API repository. In the command line open to the LINGO-WEB-API directory and run the following command:
