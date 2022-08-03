@@ -1,8 +1,12 @@
-﻿# LINGO REST API DEMO
+# LINGO REST API DEMO
 
 ## Introduction 
 
 The LINGO REST API makes LINGO accessible on a variety of languages and devices by hosting LINGO on a server. This guide will go through setting up the API locally, creating and solving models, and some more advanced topics.
+
+To see webaplications connected to a LINGO REST server see the following links:
+https://tsp.lingo-api-demo.com/
+https://staff-schedule.lingo-api-demo.com/
 
 ## Setting Up A Demo Server
 
