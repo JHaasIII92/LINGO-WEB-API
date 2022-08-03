@@ -25,7 +25,7 @@ docker-compose up
 
 ## Overview
 
-After setting up the LINGO API server, the chess.lng file will be the focus of this guide. The cURL programing language will be used throughout the documentation, and the code here can be ran on the command line with some modifications.
+After setting up the LINGO API server, the chess.lng file will be the focus of this guide. The cURL programing language will be used throughout the documentation, and the code here can be run on the command line with some modifications.
 
 The URL `http://localhost/`is used in each of the cURL commands and is the root of the API when it is running locally. After the root of the API there are six extensions:
 
@@ -116,7 +116,7 @@ curl --location --request POST 'http://localhost:8000/pointer/' \
 	},
 ]'
 ```
-It is best to send all the data to the model at once. Doing so will decrease the run.
+It is best to send all the data to the model at once. Doing so will decrease the runtime.
 
 ## Calling LINGO
 
