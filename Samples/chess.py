@@ -126,7 +126,7 @@ def Model(root,NUTS,BRANDS,SUPPLY,PRICE,FORMULA,PRODUCE,STATUS):
 
 def main():
 
-    root='https://lingo-api-demo.com'
+    root='http://localhost:8000'
 
     NUTS    = np.array(["Peanut","Cashew"])
     peanut_i   = 0
