@@ -9,10 +9,10 @@ The LINGO REST API makes LINGO accessible on a variety of languages and devices 
 A LINGO REST API server can be run locally on your computer with Docker. To get started download [Docker and Docker Compose](https://docs.docker.com/compose/install/).  Next download the LINGO-WEB-API repository. In the command line open to the LINGO-WEB-API directory and run the following command:
 
 ```bash
-> docker pull lindosystems/lingorestdemo
-> doker-compose run LINGO_API python manage.py makemigrations LINGO_REST
-> docker-compose run LINGO_API python manage.py migrate
-> docker-compose up
+docker pull lindosystems/lingorestdemo
+doker-compose run LINGO_API python manage.py makemigrations LINGO_REST
+docker-compose run LINGO_API python manage.py migrate
+docker-compose up
 ```
 
 ## Overview
