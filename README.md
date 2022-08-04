@@ -16,6 +16,10 @@ the chess.lng model in the LINGO Samples directory is used throughout this guide
 
 To learn how you can use the LINGO REST API with your application, contact info@lindo.com.
 
+## chess.lng
+
+![image](https://github.com/lindosystems/LINGO-REST-API/blob/main/Samples/images/chesslng.png)
+
 ## Set up
 
 Start by downloading the LINGO REST API located at https://github.com/lindosystems/LINGO-REST-API. Next download Docker and Docker Compose. Once complete, in the 
