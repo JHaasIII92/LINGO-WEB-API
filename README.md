@@ -1,21 +1,25 @@
 # LINGO REST API DEMO
 
 ## Introduction 
-
-The LINGO REST API makes LINGO accessible on a variety of languages and devices by hosting LINGO on a server. This guide will go through setting up the API locally, creating and solving models, and some more advanced topics.
-
-To see web applications connected to a LINGO REST server see the following links:
+The LINGO REST API makes LINGO accessible on a variety of languages and devices by 
+hosting LINGO on a server. To see web applications connected to a LINGO REST API server 
+please view the following two interactive examples: 
 
 https://tsp.lingo-api-demo.com/
 
 https://staff-schedule.lingo-api-demo.com/
 
+This guide will go through setting up the API locally, creating, solving, and querying 
+models as well as some more advanced topics. To give a hands-on approach to 
+understanding the flow of making calls to the API that will build, solve, and query a model 
+the chess.lng model in the LINGO Samples directory is used throughout this guide. 
+
 To learn how you can use the LINGO REST API with your application, contact info@lindo.com.
 
-## Setting Up A Demo Server
+## Set up
 
-A LINGO REST API server can be run locally on your computer with Docker. To get started download [Docker and Docker Compose](https://docs.docker.com/compose/install/).  Next download the LINGO-WEB-API repository. In the command line open to the LINGO-WEB-API directory and run the following command:
-
+Start by downloading the LINGO REST API located at https://github.com/lindosystems/LINGO-REST-API. Next download Docker and Docker Compose. Once complete, in the 
+command line open the LINGO-REST-API directory and run the following commands: 
 ```bash
 docker pull lindosystems/lingorestdemo
 doker-compose run LINGO_API python manage.py makemigrations LINGO_REST
@@ -205,36 +209,4 @@ curl --location --request GET 'http://localhost:8000/log/{MODEL_ID}'
 
 This will display the log file in the terminal. Alternatively, you may type the URL `http://localhost:8000/log/{MODEL_ID}` in your browser and the file will download.
 
-## chess.lng
 
-As a refrence bellow is the `chess.lng` mentioned throughout the cURL samples.
-
-```
-MODEL:
-SETS:
-	NUTS: SUPPLY;
-	BRANDS: PRICE, PRODUCE;
-	NCROSSB( NUTS, BRANDS): FORMULA;
-ENDSETS 
-
-DATA:
-	NUTS = @POINTER( 1);
-	BRANDS = @POINTER( 2);
-	SUPPLY = @POINTER( 3);
-	PRICE = @POINTER( 4);
-	FORMULA = @POINTER( 5);
-ENDDATA 
-
-MAX = @SUM( BRANDS( I): PRICE( I) * PRODUCE( I));
-@FOR( NUTS( I): 
-	@SUM( BRANDS( J): FORMULA( I, J) * PRODUCE( J) / 16) <= SUPPLY( I) );
-
-DATA:
-
-	@POINTER( 6) = PRODUCE;
-	@POINTER( 7) = @STATUS();
-
-ENDDATA
-END
-
-```
