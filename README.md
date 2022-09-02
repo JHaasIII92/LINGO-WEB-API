@@ -26,7 +26,7 @@ Start by downloading the LINGO REST API located at https://github.com/lindosyste
 command line open the LINGO-REST-API directory and run the following commands: 
 ```bash
 docker pull lindosystems/lingorestdemo
-doker-compose run LINGO_API python manage.py makemigrations LINGO_REST
+docker-compose run LINGO_API python manage.py makemigrations LINGO_REST
 docker-compose run LINGO_API python manage.py migrate
 docker-compose up
 ```
